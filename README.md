@@ -18,7 +18,7 @@ I made it because I was bored by my long weekend.
 ![Fetch 4](preview/4fetch.png " ")
 
 
-![Neovim](preview/neovim.png " ")
+![Cava](preview/cava.png " ")
 
 
 
