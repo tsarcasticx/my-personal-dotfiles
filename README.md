@@ -1,7 +1,6 @@
 # my-personal-dotfiles
-This is how I configure my Unix looks
-You guys can also use mine.
-For me, it is very _refreshing_ , isn't it?
+This is my second rice.
+I made it because I was bored by my long weekend.
 
 ## Preview
 ![First Boot](preview/boot.png "This is the first boot")
@@ -22,25 +21,25 @@ For me, it is very _refreshing_ , isn't it?
 ![Neovim](preview/neovim.png " ")
 
 
-## Features
-* Basic hardware status (battery, brightness, volume, Wi-Fi)
-* Minimalist
-* Lots of system information on screen (CPU load, swap and memory usage, username and hostname display)
-* Neovim (In normal mode, press `space + h` for horizontal and `space + v` for vertical)
-
 
 ## Requirements
 ### Fonts
-Primarily, I use [JetBrains font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip)
+I use [JetBrains font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip), Baskerville, and Yuji Boku.
+For those who haven't installed Baskerville and Yuji Boku, you can run this script:
+```sh
+./to-homedir-local-share-fonts.sh
+```
+
 ### Apps
 * ZSH
 * Kitty
-* Neovim
 * BSPWM
 * Picom
 * Rofi
 * Polybar
-* scrot
 * SXHKD
-* BTOP++
-* Conky
+
+## How to Install
+```sh
+mv dotfiles/* $HOME/.config/
+```

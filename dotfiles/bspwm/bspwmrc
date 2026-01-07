@@ -13,12 +13,8 @@ bspc config window_gap          12
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
-# bspc config pointer_follows_focus true
-# bspc config focus_follows_pointer true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
-bspc rule -a firefox desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Yad state=floating
 bspc rule -a Kupfer.py focus=on
@@ -30,24 +26,27 @@ bspc config focused_border_color        "#6c71c4"
 bspc config normal_border_color         "#073642"
 bspc config active_border_color         "#073642"
 
+# No blank screen
+xset s off
+xset -dpms
+xset s noblank
+
 #
 # Autostart
 #
 # Set display from arandr saved script
 sh ~/.screenlayout/monitor.sh &
 # Bar
-~/.config/polybar/launch.sh &
+polybar top &
+polybar bottom &
+polybar wmtitle &
 # Notifications
 /usr/bin/dunst &
 
 # Wallpaper
-# nitrogen --restore &
-feh --bg-scale $HOME/Pictures/everforest.jpg
-conky
-# Dex
-dex -a -s /etc/xdg/autostart/:~/.config/autostart/  &
+feh --bg-scale $HOME/.config/bspwm/wallpaper/wall.svg
 # Picom
-# picom -b &
+picom -b &
 # Network Applet
 nm-applet --indicator &
 
